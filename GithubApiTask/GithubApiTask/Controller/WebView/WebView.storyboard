@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WebView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WebViewController" customModule="GithubApiTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfi-QZ-Rwy">
+                                <rect key="frame" x="0.0" y="725" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem image="chevron.backward" catalog="system" id="EON-kc-Rqv">
+                                        <connections>
+                                            <action selector="tapBackBtn:" destination="Y6W-OH-hqX" id="2Q3-eC-c7Q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="6Jj-1x-qla"/>
+                                    <barButtonItem image="chevron.forward" catalog="system" id="Sa9-4o-qkv">
+                                        <connections>
+                                            <action selector="tapForwardBtn:" destination="Y6W-OH-hqX" id="HTq-HE-TnN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-yD-QLw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6X5-yD-QLw" secondAttribute="trailing" id="2cW-sB-98z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sfi-QZ-Rwy" secondAttribute="bottom" id="5iJ-3C-7X6"/>
+                            <constraint firstItem="sfi-QZ-Rwy" firstAttribute="top" secondItem="6X5-yD-QLw" secondAttribute="bottom" id="LqA-aG-plS"/>
+                            <constraint firstItem="sfi-QZ-Rwy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="gDW-NR-IN2"/>
+                            <constraint firstItem="6X5-yD-QLw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gGT-Op-WAv"/>
+                            <constraint firstItem="6X5-yD-QLw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qmM-ed-kKR"/>
+                            <constraint firstItem="sfi-QZ-Rwy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uND-vh-Rg0"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backBtn" destination="EON-kc-Rqv" id="Uh7-Ok-0YM"/>
+                        <outlet property="backgroundView" destination="6X5-yD-QLw" id="RQ9-si-CsI"/>
+                        <outlet property="forwardBtn" destination="Sa9-4o-qkv" id="8ke-ZC-Oap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
